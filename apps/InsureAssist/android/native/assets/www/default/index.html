@@ -1,0 +1,99 @@
+<!DOCTYPE HTML><html>
+    <head>
+        <meta charset="UTF-8">
+        <title>APICall</title>
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+<!--
+    			<link rel="shortcut icon" href="images/favicon.png">
+    			<link rel="apple-touch-icon" href="images/apple-touch-icon.png"> 
+    		-->
+        <link href="worklight/worklight.css" rel="stylesheet">
+        <link href="http://code.jquery.com/mobile/git/jquery.mobile-git.css" rel="stylesheet">
+        <link href="jqueryMobile/jquery.mobile-1.4.5.min.css" rel="stylesheet">
+        <link href="css/InsureAssist.css" rel="stylesheet">
+        <script>
+		// Define WL namespace.
+		var WL = WL ? WL : {};
+		/**
+		 * WLClient configuration variables.
+		 * Values are injected by the deployer that packs the gadget.
+		 */
+		 WL.StaticAppProps = {
+   "APP_DISPLAY_NAME": "InsureAssist",
+   "APP_ID": "InsureAssist",
+   "APP_SERVICES_URL": "\/apps\/services\/",
+   "APP_VERSION": "1.0",
+   "ENVIRONMENT": "android",
+   "LOGIN_DISPLAY_TYPE": "embedded",
+   "WORKLIGHT_NATIVE_VERSION": "1258641523",
+   "WORKLIGHT_PLATFORM_VERSION": "7.1.0.0",
+   "WORKLIGHT_ROOT_URL": "\/apps\/services\/api\/InsureAssist\/android\/"
+};
+</script>
+		<script src="worklight/cordova.js"></script>
+		<script src="worklight/wljq.js"></script>
+		<script src="worklight/worklight.js"></script>
+		<script src="worklight/checksum.js"></script>
+		<script src="js/initOptions.js"></script>
+    		<script src="js/main.js"></script>
+    		<script src="js/messages.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    </head>
+    <body style="display: none;">
+        <div data-position="fixed" data-role="header">
+            <div class="headerimg">
+                <a onclick="back();">&gt;</a><img class="logo-img" src="images/logo.png">
+		</div>
+            <div class="topbar">
+                <h1 align="center">Quick Quote</h1>
+            </div>
+        </div>
+	<!-- /header -->
+        <div id="AppBody">
+		<!-- This is a placeholder for dynamic page content -->
+            <div class="ui-content" data-role="main" id="pagePort">
+                <div align="center" id="authenticatorLoginFormWrapper">
+                    <h1>Welcome. Please log in</h1>
+                    <div id="LoginForm">
+                        <form id="loginForm">
+                            <input id="Username" placeholder="LoginId" type="text"> 
+							<input id="Password" placeholder="Password" type="password"> 
+                            <br>
+                            <a class="insureAssistloginButton" data-role="button" id="logIn" type="submit">LogIn</a>
+                        </form>
+                        <a class="insureAssistButton" data-role="button" id="getQuote" onclick="submit();" style="background-color: #00B2EF;">Get Quote</a>
+							 <a class="insureAssistButton" data-role="button" id="claimCentre" style="background-color: #00B2EF;">Claim Centre</a>
+                    </div>
+                    <br>
+                    <a class="insureAssistLoginLabel" href="">Forgot
+					ID/Password?</a>
+                    <br>
+                    <br> 
+                    <a class="insureAssistLoginLabel" href="">Create
+					Account</a> 
+                </div>
+            </div>
+        </div>
+        <div data-position="fixed" data-role="footer" data-theme="a">
+            <div class="footerimg">
+                <figure>
+                    <a href=""><img alt="Locator" class="footer-img" src="images/branch_locator.png"></a>
+                    <figcaption>Locator</figcaption>
+                </figure>
+                <figure>
+                    <a href=""><img alt="Find Agent" class="footer-img" src="images/find_agent.png"></a>
+                    <figcaption>Find Agent</figcaption>
+                </figure>
+                <figure>
+                    <a href=""><img alt="Call Me Back" class="footer-img" src="images/call_me.png"></a>
+                    <figcaption>Call Me Back</figcaption>
+                </figure>
+                <figure>
+                    <a href=""><img alt="Live Chat" class="footer-img" src="images/live_chat.png"></a>
+                    <figcaption>Live Chat</figcaption>
+                </figure>
+            </div>
+        </div>
+    </body>
+</html>

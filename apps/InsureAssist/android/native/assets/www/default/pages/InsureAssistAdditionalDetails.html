@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<!-- Licensed Materials - Property of IBM
+			 5725-G92 (C) Copyright IBM Corp. 2006, 2013. All Rights Reserved.
+			 US Government Users Restricted Rights - Use, duplication or
+             disclosure restricted by GSA ADP Schedule Contract with IBM Corp. -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>InsureAssist</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+<!--
+	<link rel="shortcut icon" href="images/favicon.png">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png"> 
+-->
+<link href="jqueryMobile/jquery.mobile-1.4.5.min.css" rel="stylesheet">
+<link rel="stylesheet"  href="http://code.jquery.com/mobile/git/jquery.mobile-git.css" />
+<script>window.$ = window.jQuery = WLJQ;</script>
+    		<script src="js/initOptions.js"></script>
+    		<script src="js/main.js"></script>
+    		<script src="js/messages.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<link rel="stylesheet" href="css/InsureAssist.css">
+</head>
+
+<body>
+	<div id="additionalDetails" align="center">
+		
+		
+			<label>Get more protection with Add-on Covers</label>
+		
+		<form  id="addOnCoverPage" method="get">
+		
+		
+			  <input type="checkbox" id="accessories" value="accessories" name="accessories"><label style="font-size: 12px;" data-mini="true" for="accessories" >Get Additional Protection For accessories</label>
+			  <input type="checkbox" id="depreciationCover" value="depreciationCover" name="depreciationCover" checked="checked"><label style="font-size: 12px;" data-mini="true" for="depreciationCover" >Zero depreciation cover</label>
+			  <input type="checkbox" id="engineCover" value="engineCover" name="engineCover" checked="checked"><label style="font-size: 12px;" data-mini="true" for="engineCover">Engine Protect Plus cover</label>
+			  <input type="checkbox" id="accidentCover" value="accidentCover" name="accidentCover" checked="checked"><label style="font-size: 12px;" data-mini="true" for="accidentCover">Personal Accident cover for passengers</label>
+			  <input type="checkbox" id="garageCover" value="garageCover" name="garageCover" checked="checked"><label style="font-size: 12px;" data-mini="true" for="garageCover">Garage Cash cover (Daily allowance)</label>
+			  <input type="checkbox" id="hospitalizationCover" value="hospitalizationCover" name="hospitalizationCover" checked="checked"><label style="font-size: 12px;" data-mini="true" for="hospitalizationCover">Accidental Hospitalization cover</label>
+			  <input type="checkbox" id="consumableCover" value="consumableCover" name="consumableCover" checked="checked"><label style="font-size: 12px;" data-mini="true" for="consumableCover">Consumable Cover</label>
+			  <a style="background-color: #00B2EF" class="insureAssistButton" data-role="button" onclick="onAdditionalCoverages();">Submit</a>
+		</form>
+		
+				
+		</div>
+		
+		
+		<script type="text/javascript">
+		
+	function onAdditionalCoverages(){
+	
+	 pagesHistory.push(path + "pages/InsureAssistAdditionalDetails.html");
+	$("#pagePort").load(path + "pages/FinalPremium.html");
+	 
+	
+	}
+	
+	
+	</script>
+		
+		</body>

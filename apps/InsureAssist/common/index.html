@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>APICall</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+<!--
+    			<link rel="shortcut icon" href="images/favicon.png">
+    			<link rel="apple-touch-icon" href="images/apple-touch-icon.png"> 
+    		-->
+
+
+<link rel="stylesheet"  href="http://code.jquery.com/mobile/git/jquery.mobile-git.css" />
+<link href="jqueryMobile/jquery.mobile-1.4.5.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/InsureAssist.css" />
+<script src="js/initOptions.js"></script>
+    		<script src="js/main.js"></script>
+    		<script src="js/messages.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script
+	src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+</head>
+<body style="display: none;">
+	<div data-role="header" data-position="fixed">
+		<div class="headerimg">
+			<a onclick="back();">></a><img class="logo-img" src="images/logo.png">
+		</div>
+
+		<div class="topbar">
+			<h1 align="center">Quick Quote</h1>
+		</div>
+
+	</div>
+	<!-- /header -->
+	<div id="AppBody">
+	
+		<!-- This is a placeholder for dynamic page content -->
+
+
+		<div data-role="main" id="pagePort" class="ui-content">
+
+			<div id="authenticatorLoginFormWrapper" align="center">
+				<h1>Welcome. Please log in</h1>
+				<div id="LoginForm">
+					<form id="loginForm">
+						<input id="Username" type="text" placeholder="LoginId" /> 
+							<input id="Password" type="password" placeholder="Password" /> <br>
+						<a class="insureAssistloginButton" data-role="button" id="logIn"
+							type="submit">LogIn</a>
+					</form>
+					
+						<a style="background-color: #00B2EF;" class="insureAssistButton" data-role="button"
+							onclick="submit();" id="getQuote">Get Quote</a>
+							
+							 <a style="background-color: #00B2EF;" class="insureAssistButton"
+							data-role="button" id="claimCentre">Claim Centre</a>
+					
+
+				</div>
+<br>
+				<a href="" class="insureAssistLoginLabel">Forgot
+					ID/Password?</a><br><br> <a href="" class="insureAssistLoginLabel">Create
+					Account</a> 
+
+			</div>
+ 
+		</div>
+	</div>
+	
+	
+	<div data-role="footer" data-position="fixed" data-theme="a">
+		<div class="footerimg">
+			<figure>
+				<a href=""><img class="footer-img" alt="Locator"
+					src="images/branch_locator.png"></a>
+				<figcaption>Locator</figcaption>
+			</figure>
+			<figure>
+				<a href=""><img class="footer-img" alt="Find Agent"
+					src="images/find_agent.png"></a>
+				<figcaption>Find Agent</figcaption>
+			</figure>
+			<figure>
+				<a href=""><img class="footer-img" alt="Call Me Back"
+					src="images/call_me.png"></a>
+				<figcaption>Call Me Back</figcaption>
+			</figure>
+			<figure>
+				<a href=""><img class="footer-img" alt="Live Chat"
+					src="images/live_chat.png"></a>
+				<figcaption>Live Chat</figcaption>
+			</figure>
+
+
+		</div>
+	</div>
+</body>
+</html>

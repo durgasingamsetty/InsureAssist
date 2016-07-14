@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>InsureAssist</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+<!--
+  			<link rel="shortcut icon" href="images/favicon.png">
+  			<link rel="apple-touch-icon" href="images/apple-touch-icon.png"> 
+  		-->
+  		<script src="js/modal.js"></script>
+  		<script src="js/datevalidation.js"></script>
+  		<link rel="stylesheet"  href="http://code.jquery.com/mobile/git/jquery.mobile-git.css" />
+  		
+<link href="jqueryMobile/jquery.mobile-1.4.5.min.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script
+	src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<link rel="stylesheet" href="css/InsureAssist.css" />
+  		<!--datepicker  -->
+    		
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.8.23/themes/base/jquery-ui.css">
+<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+<script src="http://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+<link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
+
+<!-- end of datepicker  -->
+
+
+
+<script>
+	window.$ = window.jQuery = WLJQ;
+	$(function() {
+	alert("hieee");
+     $( "#date" ).datepicker();
+});
+	
+	function termsandconditions()
+	{
+	  
+	  
+    modal.style.display = "block";
+    }
+	
+</script>
+
+
+
+</head>
+
+<body>
+	
+	<div id="authenticatorQuoteFormWrapper" align="center">
+
+		
+		<form id="form1" method="post" id="quoteDetails">
+			<br /> <select id="rtoLocationSelector"
+				class="QuickQuoteDropDownSelector">
+				<option selected="selected">Select RTO Location</option>
+				
+			</select>
+			<div id="rtolocationerror" class="error">Please select RTO Location</div>
+			
+			<input type="text"  data-select="datepicker" name="date" id="date"
+					placeholder="Registration Date">
+			<div id="regdateerror" class="error">Please enter Registration Date in MM/DD/YYYY</div>
+			
+			<select id="manufacturer" onchange="callModelsAPI()">
+				<option selected="selected">Manufacturer</option>
+			</select> 
+			<div id="manufacturererror" class="error">Please select manufacturer of your vehicle</div>
+			
+			<select id="model">
+				<option selected="selected">Model</option>
+			</select> 
+			<div id="modelerror" class="error">Please select model of your vehicle</div>
+			
+			<input type="checkbox" name="terms" id="terms"> 
+			<label
+				data-mini="true" for="terms" style="font-size: 11px;">I
+				agree to the <a href="#" style="text-decoration: none;" onclick="termsandconditions();" id="termslink">Terms
+					and Conditions</a>
+			</label> 
+			<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">×</span>
+    <p>We value you as a customer and respect your right to privacy. In the process of operating the Web Site, we may become aware of information relating to you, including information that is of a confidential nature. We are strongly committed to protecting your privacy online and have taken steps to protect such information. To aid us in protecting your privacy, you should maintain secrecy of your login ID and password, if any, provided to you in connection with your account with www.icicilombard.com
+    Collecting your personal information</p>
+  </div>
+
+</div>
+
+			<a href="#" onclick="quickQuote()"
+				style="background-color: #00B2EF" class="insureAssistButton"
+				data-role="button">QuickQuote</a>
+		</form>
+		
+		
+       
+  
+		
+	</div>
+
+</body>
+</html>
